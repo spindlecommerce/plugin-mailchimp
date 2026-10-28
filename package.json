@@ -1,0 +1,51 @@
+{
+  "name": "@spindlecommerce/plugin-mailchimp",
+  "version": "1.0.0",
+  "description": "Mailchimp for SpindleCommerce: customers join your audience with their marketing consent, and each channel's products and paid orders go to a Mailchimp store, for product recommendations, purchase segments and e-commerce automations.",
+  "keywords": [
+    "spindlecommerce",
+    "spindlecommerce-plugin",
+    "marketing",
+    "mailchimp",
+    "email-marketing"
+  ],
+  "homepage": "https://github.com/spindlecommerce/plugin-mailchimp#readme",
+  "bugs": "https://github.com/spindlecommerce/plugin-mailchimp/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spindlecommerce/plugin-mailchimp.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24.12"
+  },
+  "packageManager": "pnpm@11.13.1",
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepack": "pnpm build"
+  },
+  "peerDependencies": {
+    "@spindlecommerce/plugin-sdk": "^1.1.0"
+  },
+  "devDependencies": {
+    "@spindlecommerce/plugin-sdk": "^1.1.0",
+    "@types/node": "^24",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
